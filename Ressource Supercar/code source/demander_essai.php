@@ -11,11 +11,10 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $car_id = $_GET["id"];
 
     // Connexion à la base de données
-    $servername = "mysql-supercar.alwaysdata.net";
-    $username = "supercar";
-    $password = "fgh123b456";
-    $dbname = "supercar_said";
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "proto";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 

@@ -9,11 +9,10 @@ if (!isset($_SESSION["is_admin"]) || $_SESSION["is_admin"] !== true) {
 // Le reste du code de la page ici...
 
 // Connexion à la base de données
-$servername = "mysql-supercar.alwaysdata.net";
-$username = "supercar";
-$password = "fgh123b456";
-$dbname = "supercar_said";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "proto";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
