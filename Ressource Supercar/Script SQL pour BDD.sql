@@ -18,11 +18,11 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `proto`
+-- Base de données : `supercar_said`
 --
 
 -- --------------------------------------------------------
-
+USE supercar_said;
 --
 -- Structure de la table `demandes_essai`
 --
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `demandes_essai` (
   `date_demande` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `voiture_id` (`voiture_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `placeholders` (
   `id` int NOT NULL AUTO_INCREMENT,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `is_admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateurs`
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `voitures` (
   `annee_fabrication` int NOT NULL,
   `carburant` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `voitures`
