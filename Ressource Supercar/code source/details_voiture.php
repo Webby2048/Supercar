@@ -1,12 +1,12 @@
 <?php
 session_start();
-// Connexion à la base de données (même code que précédemment)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "proto";
-
+// Connexion à la base de données
+$servername = "mysql-supercar.alwaysdata.net";
+$username = "supercar";
+$password = "fgh123b456";
+$dbname = "supercar_said";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
 
 // Vérifier la connexion
 if (!$conn) {
